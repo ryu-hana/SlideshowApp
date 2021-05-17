@@ -136,6 +136,10 @@ class ViewController: UIViewController {
     
     // 画像クリック時の処理
     @IBAction func itemTap(_ sender: Any) {
+        // タイマーをクリア
+        self.timer.invalidate()
+        self.timer = nil
+        
         // DetailViewController へ遷移するために Segue を呼び出す
         performSegue(withIdentifier: "toDetailViewController",sender: nil)
     }
