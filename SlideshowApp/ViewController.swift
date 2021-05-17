@@ -32,17 +32,15 @@ class ViewController: UIViewController {
         self.image.image = UIImage(named: imageList[self.previewImageNo])
     }
     
-    // prepaare は、segue（画面遷移）前処理
+    // 画像クリックによる画面遷移の前処理
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        // スライドショー停止
+        self.slideshow(play: false)
+        
         // segueから遷移先のControllerを取得する
         let detailViewController:DetailViewController = segue.destination as! DetailViewController
         // 表示中のアイテム名を遷移先の変数に設定
         detailViewController.viewItem = self.imageList[self.previewImageNo]
-    }
-    
-    @objc func playImage(_ timer: Timer) {
-        // 表示画像の更新
-        self.updateViewItem(type: MoveType.next)
     }
     
     // 戻るボタン
@@ -59,6 +57,12 @@ class ViewController: UIViewController {
         else {
             self.slideshow(play: false)
         }
+    }
+    
+    // 進むボタン
+    @IBAction func nextBtn(_ sender: Any) {
+        // 表示画像の更新
+        self.updateViewItem(type: MoveType.next)
     }
     
     // スライドショー開始・停止
@@ -96,9 +100,8 @@ class ViewController: UIViewController {
             self.nextBtn.isEnabled = true
         }
     }
-    
-    // 進むボタン
-    @IBAction func nextBtn(_ sender: Any) {
+    // スライドショーの画像更新
+    @objc func playImage(_ timer: Timer) {
         // 表示画像の更新
         self.updateViewItem(type: MoveType.next)
     }
@@ -131,16 +134,6 @@ class ViewController: UIViewController {
     // 戻るボタンでの遷移前処理
     @IBAction func unwind(_ segue: UIStoryboardSegue) {
     }
-    
-    // 画像クリック時の処理
-    @IBAction func itemTap(_ sender: Any) {
-        // スライドショー停止
-        self.slideshow(play: false)
-        
-        // DetailViewController へ遷移するために Segue を呼び出す
-        performSegue(withIdentifier: "toDetailViewController",sender: nil)
-    }
-    
 }
 
 enum MoveType: Int {

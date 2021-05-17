@@ -45,7 +45,7 @@
                                     <constraint firstAttribute="width" secondItem="Pl9-l3-zfJ" secondAttribute="height" multiplier="1:1" id="xYD-vD-Zmx"/>
                                 </constraints>
                                 <connections>
-                                    <outletCollection property="gestureRecognizers" destination="54V-Rr-0ED" appends="YES" id="Q7a-ih-pCS"/>
+                                    <outletCollection property="gestureRecognizers" destination="kKO-6S-Mcg" appends="YES" id="UPi-r0-yDB"/>
                                 </connections>
                             </imageView>
                         </subviews>
@@ -67,13 +67,12 @@
                         <outlet property="image" destination="Pl9-l3-zfJ" id="MDB-Vm-Q9s"/>
                         <outlet property="nextBtn" destination="n7g-HP-ZmF" id="Ocv-lF-fzf"/>
                         <outlet property="playBtn" destination="8ZR-o5-lFd" id="JjH-CA-Jkh"/>
-                        <segue destination="lqn-9S-Gxi" kind="presentation" identifier="toDetailViewController" id="DzY-9D-MZM"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
-                <tapGestureRecognizer id="54V-Rr-0ED">
+                <tapGestureRecognizer id="kKO-6S-Mcg">
                     <connections>
-                        <action selector="itemTap:" destination="BYZ-38-t0r" id="acl-Qd-1yl"/>
+                        <segue destination="lqn-9S-Gxi" kind="show" id="rYX-xE-1sk"/>
                     </connections>
                 </tapGestureRecognizer>
             </objects>
@@ -122,7 +121,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LCk-gk-ZBG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="swn-9h-0fh" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="667" y="78"/>
+            <point key="canvasLocation" x="808" y="78"/>
         </scene>
     </scenes>
     <resources>
