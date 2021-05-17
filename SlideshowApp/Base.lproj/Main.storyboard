@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="ipad10_9rounded" orientation="portrait" layout="fullscreen" appearance="light"/>
+    <device id="retina3_5" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -13,34 +13,37 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="SlideshowApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="820" height="1180"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8ZR-o5-lFd">
-                                <rect key="frame" x="377" y="1110" width="66" height="30"/>
+                                <rect key="frame" x="127" y="430" width="66" height="30"/>
                                 <state key="normal" title="再生/停止"/>
                                 <connections>
                                     <action selector="playBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="8hF-zh-opw"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vgK-Hh-D78">
-                                <rect key="frame" x="20" y="1110" width="40" height="30"/>
+                                <rect key="frame" x="20" y="430" width="40" height="30"/>
                                 <state key="normal" title="&lt;戻る"/>
                                 <connections>
                                     <action selector="backBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="R11-BL-Suw"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n7g-HP-ZmF">
-                                <rect key="frame" x="760" y="1110" width="40" height="30"/>
+                                <rect key="frame" x="260" y="430" width="40" height="30"/>
                                 <state key="normal" title="進む&gt;"/>
                                 <connections>
                                     <action selector="nextBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="QcL-AE-BGJ"/>
                                 </connections>
                             </button>
-                            <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Pl9-l3-zfJ">
-                                <rect key="frame" x="285" y="465" width="250" height="250"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Pl9-l3-zfJ">
+                                <rect key="frame" x="85" y="165" width="150" height="150"/>
                                 <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="5O8-oS-2Gb"/>
+                                    <constraint firstAttribute="width" secondItem="Pl9-l3-zfJ" secondAttribute="height" multiplier="1:1" id="xYD-vD-Zmx"/>
+                                </constraints>
                                 <connections>
                                     <outletCollection property="gestureRecognizers" destination="54V-Rr-0ED" appends="YES" id="Q7a-ih-pCS"/>
                                 </connections>
@@ -52,6 +55,8 @@
                             <constraint firstItem="n7g-HP-ZmF" firstAttribute="bottom" secondItem="vgK-Hh-D78" secondAttribute="bottom" id="0fx-u7-0PZ"/>
                             <constraint firstItem="vgK-Hh-D78" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="8dz-3c-Tj0"/>
                             <constraint firstItem="8ZR-o5-lFd" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Dkz-zC-rHs"/>
+                            <constraint firstItem="Pl9-l3-zfJ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Krz-dM-g1H"/>
+                            <constraint firstItem="Pl9-l3-zfJ" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Uhq-hI-MsF"/>
                             <constraint firstItem="8ZR-o5-lFd" firstAttribute="bottom" secondItem="vgK-Hh-D78" secondAttribute="bottom" id="Zce-3z-eCF"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="n7g-HP-ZmF" secondAttribute="trailing" constant="20" id="fIP-IE-RTC"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="8ZR-o5-lFd" secondAttribute="bottom" constant="20" id="j1Q-Ta-piW"/>
@@ -79,11 +84,11 @@
             <objects>
                 <viewController id="lqn-9S-Gxi" customClass="DetailViewController" customModule="SlideshowApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="wvK-5e-3Ao">
-                        <rect key="frame" x="0.0" y="0.0" width="704" height="995.5"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="460"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="51z-qi-Xtu">
-                                <rect key="frame" x="336.5" y="945.5" width="31" height="30"/>
+                                <rect key="frame" x="144.5" y="410" width="31" height="30"/>
                                 <state key="normal" title="戻る"/>
                                 <connections>
                                     <action selector="playBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="NIL-lL-m6X"/>
@@ -91,7 +96,7 @@
                                 </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="2yF-tV-m4m">
-                                <rect key="frame" x="20" y="166" width="664" height="664"/>
+                                <rect key="frame" x="20" y="90" width="280" height="280"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="2yF-tV-m4m" secondAttribute="height" multiplier="1:1" id="YQr-B0-dPW"/>
                                 </constraints>

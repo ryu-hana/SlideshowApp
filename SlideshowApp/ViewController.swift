@@ -28,29 +28,8 @@ class ViewController: UIViewController {
         // 再生ボタンタイトル設定
         self.playBtn.setTitle(PlayBtnTitle.play.rawValue, for: .normal)
         
-        // Screen Size の取得
-        let screenWidth = self.view.bounds.width
-        let screenHeight = self.view.bounds.height
-        
-        // UIImage インスタンスの生成
-        let image = UIImage(named:imageList[self.previewImageNo])!
-        
-        // 画像の幅・高さの取得
-        let width = image.size.width
-        let height = image.size.height
-        
-        // 画像サイズをスクリーン幅に合わせる
-        let scale = (screenWidth * 0.5) / width
-        let rect:CGRect = CGRect(x:0, y:0, width:width*scale, height:height*scale)
-        
         // 初期画像表示
         self.image.image = UIImage(named: imageList[self.previewImageNo])
-        
-        // ImageView frame をCGRectで作った矩形に合わせる
-        self.image.frame = rect;
-        
-        // 画像の中心をスクリーンの中心位置に設定
-        self.image.center = CGPoint(x:screenWidth/2, y:screenHeight/2)
     }
     
     // prepaare は、segue（画面遷移）前処理
