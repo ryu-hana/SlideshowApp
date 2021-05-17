@@ -14,6 +14,10 @@
 		B7197CD0265100C000F891E6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B7197CCF265100C000F891E6 /* Assets.xcassets */; };
 		B7197CD3265100C000F891E6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B7197CD1265100C000F891E6 /* LaunchScreen.storyboard */; };
 		B7197CDC265128B300F891E6 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7197CDB265128B300F891E6 /* DetailViewController.swift */; };
+		B76A680E2652C01F008B7E10 /* 愛知.png in Resources */ = {isa = PBXBuildFile; fileRef = B76A680D2652C01F008B7E10 /* 愛知.png */; };
+		B76A68112652C029008B7E10 /* 岐阜.png in Resources */ = {isa = PBXBuildFile; fileRef = B76A68102652C029008B7E10 /* 岐阜.png */; };
+		B76A68142652C02F008B7E10 /* 三重.png in Resources */ = {isa = PBXBuildFile; fileRef = B76A68132652C02F008B7E10 /* 三重.png */; };
+		B76A68172652C036008B7E10 /* 静岡.png in Resources */ = {isa = PBXBuildFile; fileRef = B76A68162652C036008B7E10 /* 静岡.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +30,10 @@
 		B7197CD2265100C000F891E6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B7197CD4265100C000F891E6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B7197CDB265128B300F891E6 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		B76A680D2652C01F008B7E10 /* 愛知.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "愛知.png"; sourceTree = "<group>"; };
+		B76A68102652C029008B7E10 /* 岐阜.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "岐阜.png"; sourceTree = "<group>"; };
+		B76A68132652C02F008B7E10 /* 三重.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "三重.png"; sourceTree = "<group>"; };
+		B76A68162652C036008B7E10 /* 静岡.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "静岡.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +74,10 @@
 				B7197CCF265100C000F891E6 /* Assets.xcassets */,
 				B7197CD1265100C000F891E6 /* LaunchScreen.storyboard */,
 				B7197CD4265100C000F891E6 /* Info.plist */,
+				B76A68102652C029008B7E10 /* 岐阜.png */,
+				B76A68132652C02F008B7E10 /* 三重.png */,
+				B76A680D2652C01F008B7E10 /* 愛知.png */,
+				B76A68162652C036008B7E10 /* 静岡.png */,
 			);
 			path = SlideshowApp;
 			sourceTree = "<group>";
@@ -127,7 +139,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B76A68112652C029008B7E10 /* 岐阜.png in Resources */,
 				B7197CD3265100C000F891E6 /* LaunchScreen.storyboard in Resources */,
+				B76A680E2652C01F008B7E10 /* 愛知.png in Resources */,
+				B76A68142652C02F008B7E10 /* 三重.png in Resources */,
+				B76A68172652C036008B7E10 /* 静岡.png in Resources */,
 				B7197CD0265100C000F891E6 /* Assets.xcassets in Resources */,
 				B7197CCE265100BF00F891E6 /* Main.storyboard in Resources */,
 			);
