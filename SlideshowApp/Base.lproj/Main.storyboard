@@ -38,10 +38,9 @@
                                 </connections>
                             </button>
                             <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Pl9-l3-zfJ">
-                                <rect key="frame" x="85" y="165" width="150" height="150"/>
+                                <rect key="frame" x="80" y="160" width="160" height="160"/>
                                 <gestureRecognizers/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="150" id="5O8-oS-2Gb"/>
                                     <constraint firstAttribute="width" secondItem="Pl9-l3-zfJ" secondAttribute="height" multiplier="1:1" id="xYD-vD-Zmx"/>
                                 </constraints>
                                 <connections>
@@ -55,6 +54,7 @@
                             <constraint firstItem="n7g-HP-ZmF" firstAttribute="bottom" secondItem="vgK-Hh-D78" secondAttribute="bottom" id="0fx-u7-0PZ"/>
                             <constraint firstItem="vgK-Hh-D78" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="8dz-3c-Tj0"/>
                             <constraint firstItem="8ZR-o5-lFd" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Dkz-zC-rHs"/>
+                            <constraint firstItem="Pl9-l3-zfJ" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.5" id="HJq-Sx-CBJ"/>
                             <constraint firstItem="Pl9-l3-zfJ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Krz-dM-g1H"/>
                             <constraint firstItem="Pl9-l3-zfJ" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Uhq-hI-MsF"/>
                             <constraint firstItem="8ZR-o5-lFd" firstAttribute="bottom" secondItem="vgK-Hh-D78" secondAttribute="bottom" id="Zce-3z-eCF"/>
