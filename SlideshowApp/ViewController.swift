@@ -75,6 +75,20 @@ class ViewController: UIViewController {
     // 再生/停止ボタン
     @IBAction func playBtn(_ sender: Any) {
         if self.timer == nil{
+            self.slideshow(play: true)
+        }
+        else {
+            self.slideshow(play: false)
+        }
+    }
+    
+    // スライドショー開始・停止
+    func slideshow(play:Bool){
+        if play == true{ // スライドショー開始
+            if self.timer != nil {
+                // タイマーが動いている場合は何もしない
+                return
+            }
             // タイマーを開始
             self.timer = Timer.scheduledTimer(timeInterval: 2.0, target: self, selector: #selector(playImage(_:)), userInfo: nil, repeats: true)
             
@@ -85,7 +99,12 @@ class ViewController: UIViewController {
             self.backBtn.isEnabled = false
             self.nextBtn.isEnabled = false
         }
-        else {
+        else{ // スライドショー停止
+            // タイマーが動いてない場合は何もしない
+            if self.timer == nil{
+                return
+            }
+            
             // タイマーをクリア
             self.timer.invalidate()
             self.timer = nil
@@ -132,13 +151,12 @@ class ViewController: UIViewController {
     
     // 戻るボタンでの遷移前処理
     @IBAction func unwind(_ segue: UIStoryboardSegue) {
-        }
+    }
     
     // 画像クリック時の処理
     @IBAction func itemTap(_ sender: Any) {
-        // タイマーをクリア
-        self.timer.invalidate()
-        self.timer = nil
+        // スライドショー停止
+        self.slideshow(play: false)
         
         // DetailViewController へ遷移するために Segue を呼び出す
         performSegue(withIdentifier: "toDetailViewController",sender: nil)
